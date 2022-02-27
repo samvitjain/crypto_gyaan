@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+import 'modules/home/home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,8 +15,17 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          // primarySwatch: Colors.blue,
-          ),
+        // primarySwatch: Colors.blue,
+        appBarTheme: AppBarTheme(
+          color: const Color.fromARGB(255, 247, 250, 247),
+          elevation: 0,
+        ),
+        scaffoldBackgroundColor: Color.fromARGB(255, 247, 250, 247),
+        textTheme: GoogleFonts.playfairDisplayTextTheme(
+          Theme.of(context)
+              .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+        ),
+      ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -49,6 +61,11 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        // showSelectedLabels: false,
+        selectedItemColor: Colors.black,
+        selectedIconTheme: IconThemeData(
+          size: 30,
+        ),
         currentIndex: _selectedIndex,
         onTap: (int index) {
           setState(() {
@@ -59,10 +76,14 @@ class _MyHomePageState extends State<MyHomePage> {
           BottomNavigationBarItem(
             icon: Icon(Icons.home_outlined),
             label: 'Home',
+            activeIcon: Icon(Icons.home_filled),
           ),
           BottomNavigationBarItem(
             icon: Icon(
               Icons.dashboard_outlined,
+            ),
+            activeIcon: Icon(
+              Icons.dashboard_rounded,
             ),
             label: 'The Wall',
           ),
@@ -71,6 +92,9 @@ class _MyHomePageState extends State<MyHomePage> {
               Icons.bookmark_border_outlined,
             ),
             label: 'Bookmarks',
+            activeIcon: Icon(
+              Icons.bookmark_border_rounded,
+            ),
           ),
           // BottomNavigationBarItem(
           //   icon: Icon(
@@ -79,93 +103,6 @@ class _MyHomePageState extends State<MyHomePage> {
           //   label: 'Profile',
           // ),
         ],
-      ),
-    );
-  }
-}
-
-class HomePage extends StatelessWidget {
-  const HomePage({
-    Key? key,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Hello Mudrex!'),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Icon(
-              Icons.call,
-              size: 100,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Card(
-                color: Color.fromARGB(255, 240, 252, 240),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Padding(
-                      padding:
-                          const EdgeInsets.only(left: 8, top: 16, bottom: 16),
-                      child: Text('Modlue:'),
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          '01',
-                          style: TextStyle(
-                            fontSize: 40,
-                          ),
-                        ),
-                        VerticalDivider(
-                          width: 20,
-                          thickness: 1,
-                          indent: 20,
-                          endIndent: 0,
-                          color: Colors.grey,
-                        ),
-                        Text(
-                          'Stock Market Basics',
-                          style: TextStyle(
-                            fontSize: 20,
-                          ),
-                        ),
-                      ],
-                    ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Row(
-                          children: [
-                            Text('Level: '),
-                            Text('Beginner'),
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            Text('Chapter: '),
-                            Text('01'),
-                          ],
-                        ),
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: LinearProgressIndicator(
-                        value: .5,
-                      ),
-                    )
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
       ),
     );
   }
