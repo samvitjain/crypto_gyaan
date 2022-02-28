@@ -15,17 +15,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        // primarySwatch: Colors.blue,
-        appBarTheme: AppBarTheme(
-          color: const Color.fromARGB(255, 247, 250, 247),
-          elevation: 0,
-        ),
-        scaffoldBackgroundColor: Color.fromARGB(255, 247, 250, 247),
-        textTheme: GoogleFonts.playfairDisplayTextTheme(
-          Theme.of(context)
-              .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
-        ),
-      ),
+          // primarySwatch: Colors.blue,
+          appBarTheme: const AppBarTheme(
+            color: Color.fromARGB(255, 247, 250, 247),
+            elevation: 0,
+          ),
+          scaffoldBackgroundColor: const Color.fromARGB(255, 247, 250, 247),
+          textTheme: GoogleFonts.playfairDisplayTextTheme(
+            Theme.of(context)
+                .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
+          ),
+          cardTheme: CardTheme(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+            ),
+          )),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -42,13 +46,13 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
-  static List<Widget> _pages = <Widget>[
+  static final List<Widget> _pages = <Widget>[
     HomePage(),
-    Icon(
+    const Icon(
       Icons.camera,
       size: 150,
     ),
-    Icon(
+    const Icon(
       Icons.chat,
       size: 150,
     ),
@@ -63,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
       bottomNavigationBar: BottomNavigationBar(
         // showSelectedLabels: false,
         selectedItemColor: Colors.black,
-        selectedIconTheme: IconThemeData(
+        selectedIconTheme: const IconThemeData(
           size: 30,
         ),
         currentIndex: _selectedIndex,
