@@ -40,7 +40,7 @@ class ModulesWidget extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(4.0),
               child: Card(
-                color: Color(cardColors[index]),
+                color: Color(cardColors[index % 6]),
                 elevation: 6,
                 child: Column(
                   children: [

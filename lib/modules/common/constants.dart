@@ -1,0 +1,16 @@
+final cardColorsDark = [
+  0xfff48fb1,
+  0xffff8a65,
+  0xff4db6ac,
+  0xff9fa8da,
+  0xffce93d8,
+  0xff90a4ae,
+];
+final cardColorsLight = [
+  0x80f48fb1,
+  0x80ff8a65,
+  0x804db6ac,
+  0x809fa8da,
+  0x80ce93d8,
+  0x8090a4ae,
+];

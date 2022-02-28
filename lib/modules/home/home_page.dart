@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../common/common_widgets.dart';
+import '../common/constants.dart';
 import 'widgets/continue_card_widget.dart';
 import 'widgets/modules_widget.dart';
 import 'widgets/quiz_card_widget.dart';
@@ -12,21 +13,6 @@ class HomePage extends StatelessWidget {
   HomePage({
     Key? key,
   }) : super(key: key);
-
-  final cardColors = [
-    0xfff48fb1,
-    0xffff8a65,
-    0xff4db6ac,
-    0xff9fa8da,
-    0xffce93d8,
-    0xff90a4ae,
-    0xfff48fb1,
-    0xffff8a65,
-    0xff4db6ac,
-    0xff9fa8da,
-    0xffce93d8,
-    0xff90a4ae,
-  ];
 
   final topics = [
     'BitCoin',
@@ -40,11 +26,6 @@ class HomePage extends StatelessWidget {
     'Investing',
     'Inflation'
   ];
-
-  _randomColor() {
-    var temp = cardColors..shuffle();
-    return Color(temp[0]);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +61,7 @@ class HomePage extends StatelessWidget {
                     const QuizCard(),
                     const StreakAndGoalWidget(),
                     ModulesWidget(
-                      cardColors: cardColors,
+                      cardColors: cardColorsDark,
                       topics: topics,
                     ),
                     const SizedBox(

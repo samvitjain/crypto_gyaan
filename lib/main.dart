@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import 'modules/blogs/blogs_page.dart';
 import 'modules/home/home_page.dart';
 
 void main() {
@@ -15,21 +16,21 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-          // primarySwatch: Colors.blue,
-          appBarTheme: const AppBarTheme(
-            color: Color.fromARGB(255, 247, 250, 247),
-            elevation: 0,
+        // primarySwatch: Colors.blue,
+        appBarTheme: const AppBarTheme(
+          color: Color.fromARGB(255, 247, 250, 247),
+          elevation: 0,
+        ),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 247, 250, 247),
+        textTheme: GoogleFonts.playfairDisplayTextTheme(
+          Theme.of(context).textTheme,
+        ),
+        cardTheme: CardTheme(
+          shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
           ),
-          scaffoldBackgroundColor: const Color.fromARGB(255, 247, 250, 247),
-          textTheme: GoogleFonts.playfairDisplayTextTheme(
-            Theme.of(context)
-                .textTheme, // If this is not set, then ThemeData.light().textTheme is used.
-          ),
-          cardTheme: CardTheme(
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12),
-            ),
-          )),
+        ),
+      ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
@@ -48,14 +49,26 @@ class _MyHomePageState extends State<MyHomePage> {
   int _selectedIndex = 0;
   static final List<Widget> _pages = <Widget>[
     HomePage(),
-    const Icon(
-      Icons.camera,
-      size: 150,
-    ),
-    const Icon(
-      Icons.chat,
-      size: 150,
-    ),
+    BlogsPage(),
+    Scaffold(
+        body: Column(
+      children: [
+        Container(
+          color: Color.fromARGB(255, 12, 41, 56),
+          child: SizedBox(
+            height: 100,
+            width: 100,
+          ),
+        ),
+        Container(
+          color: Color.fromARGB(255, 12, 41, 56),
+          child: SizedBox(
+            height: 100,
+            width: 100,
+          ),
+        ),
+      ],
+    )),
   ];
 
   @override
@@ -65,7 +78,6 @@ class _MyHomePageState extends State<MyHomePage> {
         child: _pages.elementAt(_selectedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        // showSelectedLabels: false,
         selectedLabelStyle: GoogleFonts.quicksand(
           fontWeight: FontWeight.w500,
         ),
