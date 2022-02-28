@@ -46,7 +46,7 @@ class BlogsPage extends StatelessWidget {
                     bottom: 16.0,
                   ),
                   child: Card(
-                    color: Color(cardColorsLight[i % 6]),
+                    color: cardColorsLight[i % 6],
                     elevation: 2,
                     child: SizedBox(
                       height: 240,

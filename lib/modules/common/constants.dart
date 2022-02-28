@@ -1,16 +1,18 @@
+import 'package:flutter/material.dart';
+
 final cardColorsDark = [
-  0xfff48fb1,
-  0xffff8a65,
-  0xff4db6ac,
-  0xff9fa8da,
-  0xffce93d8,
-  0xff90a4ae,
+  Color(0xfff48fb1),
+  Color(0xffff8a65),
+  Color(0xff4db6ac),
+  Color(0xff9fa8da),
+  Color(0xffce93d8),
+  Color(0xff90a4ae),
 ];
 final cardColorsLight = [
-  0x80f48fb1,
-  0x80ff8a65,
-  0x804db6ac,
-  0x809fa8da,
-  0x80ce93d8,
-  0x8090a4ae,
+  Color.fromARGB(255, 252, 207, 222),
+  Color.fromARGB(255, 243, 191, 175),
+  Color.fromARGB(255, 193, 245, 240),
+  Color.fromARGB(255, 218, 223, 248),
+  Color.fromARGB(255, 243, 217, 248),
+  Color.fromARGB(255, 207, 230, 241),
 ];

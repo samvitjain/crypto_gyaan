@@ -8,7 +8,7 @@ class ModulesWidget extends StatelessWidget {
     required this.topics,
   }) : super(key: key);
 
-  final List<int> cardColors;
+  final List<Color> cardColors;
   final List<String> topics;
 
   @override
@@ -40,7 +40,7 @@ class ModulesWidget extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(4.0),
               child: Card(
-                color: Color(cardColors[index % 6]),
+                color: cardColors[index % 6],
                 elevation: 6,
                 child: Column(
                   children: [
