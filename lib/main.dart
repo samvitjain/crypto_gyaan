@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             label: 'Bookmarks',
             activeIcon: Icon(
-              Icons.bookmark_border_rounded,
+              Icons.bookmark,
             ),
           ),
           // BottomNavigationBarItem(

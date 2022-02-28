@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'widgets/continue_card_widget.dart';
+import 'widgets/quiz_card_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({
@@ -38,48 +39,99 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: Column(
                   children: [
-                    const ContinueCard(),
-                    Card(
-                      elevation: 4,
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: SvgPicture.asset(
-                                'assets/welcome.svg',
-                                placeholderBuilder: (BuildContext context) =>
-                                    Container(
-                                  child: const CircularProgressIndicator(),
-                                ),
-                                fit: BoxFit.scaleDown,
-                                height: 140,
-                              ),
-                            ),
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'Quick Quiz',
+                    ContinueCard(),
+                    QuizCard(),
+                    Padding(
+                      padding: const EdgeInsets.all(32.0),
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    '05',
                                     style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold,
+                                      fontSize: 40,
                                     ),
                                   ),
-                                  SizedBox(
-                                    height: 10,
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.all_inclusive,
+                                                size: 16,
+                                              ),
+                                              SizedBox(
+                                                width: 6,
+                                              ),
+                                              Text(
+                                                'Streak',
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Text('days')
+                                    ],
                                   ),
-                                  Text(
-                                    'Take a quick quiz to know how much you understand Crypto concepts',
-                                  ),
-                                ],
-                              ),
+                                ),
+                                SizedBox(
+                                  height: 20,
+                                )
+                              ],
                             ),
-                          ],
-                        ),
+                          ),
+                          Expanded(
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Text(
+                                    '13',
+                                    style: TextStyle(
+                                      fontSize: 40,
+                                    ),
+                                  ),
+                                ),
+                                Expanded(
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Row(
+                                        children: [
+                                          Row(
+                                            children: [
+                                              Icon(
+                                                Icons.adjust,
+                                                size: 16,
+                                              ),
+                                              SizedBox(
+                                                width: 6,
+                                              ),
+                                              Text(
+                                                'Goal',
+                                              ),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                      Text('cards/day')
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
