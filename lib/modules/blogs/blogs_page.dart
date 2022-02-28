@@ -80,7 +80,11 @@ class BlogsPage extends StatelessWidget {
                             flex: 2,
                             child: Container(
                               width: double.maxFinite,
-                              decoration: const BoxDecoration(
+                              decoration: BoxDecoration(
+                                border: Border.all(
+                                  color: cardColorsDark[i % 6],
+                                  width: 1.2,
+                                ),
                                 borderRadius: const BorderRadius.all(
                                   Radius.circular(10),
                                 ),
