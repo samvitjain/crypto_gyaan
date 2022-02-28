@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../common/common_widgets.dart';
 import 'widgets/continue_card_widget.dart';
 import 'widgets/modules_widget.dart';
 import 'widgets/quiz_card_widget.dart';
@@ -82,6 +83,10 @@ class HomePage extends StatelessWidget {
                       cardColors: cardColors,
                       topics: topics,
                     ),
+                    const SizedBox(
+                      height: 20,
+                    ),
+                    const CreatorTag()
                   ],
                 ),
               ),

@@ -66,9 +66,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         // showSelectedLabels: false,
+        selectedLabelStyle: GoogleFonts.quicksand(
+          fontWeight: FontWeight.w500,
+        ),
+        unselectedLabelStyle: GoogleFonts.quicksand(),
         selectedItemColor: Colors.black,
         selectedIconTheme: const IconThemeData(
-          size: 30,
+          size: 24,
         ),
         currentIndex: _selectedIndex,
         onTap: (int index) {
@@ -89,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
             activeIcon: Icon(
               Icons.dashboard_rounded,
             ),
-            label: 'The Wall',
+            label: 'Blogs',
           ),
           BottomNavigationBarItem(
             icon: Icon(

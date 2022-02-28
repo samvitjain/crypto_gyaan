@@ -38,7 +38,7 @@ class ContinueCard extends StatelessWidget {
                     color: Color(0xff5da34e),
                   ),
                   Text(
-                    'Stock Market Basics',
+                    'Ethereum Basics',
                     style: TextStyle(
                       fontSize: 20,
                     ),
