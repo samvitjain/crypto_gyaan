@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../../common/common_widgets.dart';
+
 class ModulesWidget extends StatelessWidget {
   const ModulesWidget({
     Key? key,
@@ -16,22 +18,7 @@ class ModulesWidget extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 20.0,
-            left: 10,
-            bottom: 10,
-          ),
-          child: Text(
-            'Lessons',
-            style: GoogleFonts.quicksand(
-              fontSize: 18,
-              fontWeight: FontWeight.w500,
-              letterSpacing: 2,
-              color: Colors.blueGrey,
-            ),
-          ),
-        ),
+        TitleWidget(title: 'Lessons'),
         GridView.count(
           shrinkWrap: true,
           physics: const NeverScrollableScrollPhysics(),

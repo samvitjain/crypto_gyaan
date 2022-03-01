@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'modules/blogs/blogs_page.dart';
+import 'modules/bookmarks/bookmarks_page.dart';
 import 'modules/home/home_page.dart';
 
 void main() {
@@ -50,25 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
   static final List<Widget> _pages = <Widget>[
     HomePage(),
     BlogsPage(),
-    Scaffold(
-        body: Column(
-      children: [
-        Container(
-          color: const Color.fromARGB(255, 12, 41, 56),
-          child: const SizedBox(
-            height: 100,
-            width: 100,
-          ),
-        ),
-        Container(
-          color: const Color.fromARGB(255, 12, 41, 56),
-          child: const SizedBox(
-            height: 100,
-            width: 100,
-          ),
-        ),
-      ],
-    )),
+    BookmarksPage(),
   ];
 
   @override

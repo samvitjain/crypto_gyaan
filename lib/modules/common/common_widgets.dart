@@ -17,3 +17,32 @@ class CreatorTag extends StatelessWidget {
     );
   }
 }
+
+class TitleWidget extends StatelessWidget {
+  TitleWidget({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(
+        top: 20.0,
+        left: 10,
+        bottom: 10,
+      ),
+      child: Text(
+        title,
+        style: GoogleFonts.quicksand(
+          fontSize: 18,
+          fontWeight: FontWeight.w500,
+          letterSpacing: 2,
+          color: Colors.blueGrey,
+        ),
+      ),
+    );
+  }
+}

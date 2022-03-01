@@ -16,7 +16,7 @@ class QuizCard extends StatelessWidget {
           children: [
             Expanded(
               child: SvgPicture.asset(
-                'assets/welcome.svg',
+                'assets/road.svg',
                 placeholderBuilder: (BuildContext context) => Container(
                   child: const CircularProgressIndicator(),
                 ),
