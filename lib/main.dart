@@ -54,15 +54,15 @@ class _MyHomePageState extends State<MyHomePage> {
         body: Column(
       children: [
         Container(
-          color: Color.fromARGB(255, 12, 41, 56),
-          child: SizedBox(
+          color: const Color.fromARGB(255, 12, 41, 56),
+          child: const SizedBox(
             height: 100,
             width: 100,
           ),
         ),
         Container(
-          color: Color.fromARGB(255, 12, 41, 56),
-          child: SizedBox(
+          color: const Color.fromARGB(255, 12, 41, 56),
+          child: const SizedBox(
             height: 100,
             width: 100,
           ),
