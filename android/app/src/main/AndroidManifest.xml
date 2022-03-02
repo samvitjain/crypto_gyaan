@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.crypto_gyaan">
    <application
-        android:label="crypto_gyaan"
+        android:label="Crypto Gyaan"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
