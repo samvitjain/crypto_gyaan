@@ -34,7 +34,7 @@ class HomePage extends StatelessWidget {
         title: const Padding(
           padding: EdgeInsets.all(8.0),
           child: const Text(
-            'Hello Mudrex!',
+            'Hello Frontier!',
             style: TextStyle(
               color: Colors.black,
             ),
